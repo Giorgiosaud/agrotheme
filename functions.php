@@ -24,7 +24,7 @@ if (!defined('AGROTHEME_BASE_URL')) {
 require_once 'vendor/autoload.php';
 function agroTheme()
 {
-    return Initialize::instance();
+    return \AgroTheme\Initialize::instance();
 }
 
 $GLOBALS['agro_theme'] = agroTheme();
