@@ -14,14 +14,25 @@
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
-
-if (!isset($content_width))
+defined('ABSPATH') or die('No script kiddies please!');
+// Define WC_PLUGIN_FILE.
+if (!defined('AGROTHEME_FILE')) {
+    define('AGROTHEME_FILE', __FILE__);
+}
+if (!defined('AGROTHEME_BASE_URL')) {
+    define('AGROTHEME_BASE_URL', plugin_dir_url(__FILE__));
+}
+require_once 'vendor/autoload.php';
+function agroTheme()
 {
+    return Initialize::instance();
+}
+$GLOBALS['agro_theme'] = agroTheme();
+
+if (!isset($content_width)) {
     $content_width = 900;
 }
-
-if (function_exists('add_theme_support'))
-{
+if (function_exists('add_theme_support')) {
     // Add Menu Support
     add_theme_support('menus');
 
