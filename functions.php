@@ -14,7 +14,6 @@
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
-defined('ABSPATH') or die('No script kiddies please!');
 // Define WC_PLUGIN_FILE.
 if (!defined('AGROTHEME_FILE')) {
     define('AGROTHEME_FILE', __FILE__);
@@ -27,6 +26,7 @@ function agroTheme()
 {
     return Initialize::instance();
 }
+
 $GLOBALS['agro_theme'] = agroTheme();
 
 if (!isset($content_width)) {
