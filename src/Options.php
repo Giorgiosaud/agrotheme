@@ -27,7 +27,7 @@ class Options
             'AgroTheme',
             'manage_options',
             'agro_theme',
-            array( $this, 'createAdminPage' ),
+            array( $this, 'createAdminPage' )
         );
         add_submenu_page(
             'agro_theme',
